@@ -7,7 +7,7 @@ let temp = 0;
 
 function isItOkayTo2021(){
   if(forInputPassword()){
-    chaerin_secret.setAttribute('href', './2021 회고 : 2022 목표 .html')
+    chaerin_secret.setAttribute('href', './2.html')
   }else{
     console.log('fasle')
   }
