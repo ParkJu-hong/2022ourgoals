@@ -1,13 +1,13 @@
 // import { dotenv } from 'dotenv';
 let chaerin_secret = document.querySelector('.chaerin_secret');
 
-let chaerin_password = '/숫자로 여기에 기입해주세요'
+let chaerin_password = '1234'
 let user_password = ''
 let temp = 0;
 
 function isItOkayTo2021(){
   if(forInputPassword()){
-    chaerin_secret.setAttribute('href', './2.html')
+    chaerin_secret.setAttribute('href', './1.html')
   }else{
     console.log('fasle')
   }
@@ -18,7 +18,7 @@ function forInputPassword(){
   user_password = document.querySelector('.chaerinPasswordForInput').value;
   if(chaerin_password === user_password){
     console.log('패스워드가 맞습니다.');
-    chaerin_secret.setAttribute('href', './2021 회고 : 2022 목표 .html')
+    chaerin_secret.setAttribute('href', './1.html')
     temp = 1;
     return true;
   }
