@@ -1,0 +1,23 @@
+{
+  "name": "2022ourgoals",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "dotenv": "^10.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bejeju/2022ourgoals.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bejeju/2022ourgoals/issues"
+  },
+  "homepage": "https://github.com/bejeju/2022ourgoals#readme",
+}

@@ -1,0 +1,667 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>2021 회고 / 2022 목표</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+}
+
+.simple-table-header {
+	background: rgb(247, 246, 243);
+	color: black;
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(145, 145, 142, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(187, 132, 108, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(215, 129, 58, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 148, 51, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(108, 155, 125, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(91, 151, 189, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(167, 130, 195, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(205, 116, 159, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(225, 111, 100, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(145, 145, 142, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(187, 132, 108, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(215, 129, 58, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 148, 51, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(108, 155, 125, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(91, 151, 189, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(167, 130, 195, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(205, 116, 159, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(225, 111, 100, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="3be0e0e8-ac51-4ee8-baf2-d4312b59cf2b" class="page sans"><header><h1 class="page-title">2021 회고 / 2022 목표</h1></header><div class="page-body"><p id="27a960ed-535e-4c98-94d0-738f069e7141" class="">
+</p><h3 id="e6c7a680-4b2c-480c-8d76-07e4a20ae871" class="">2021 회고</h3><p id="1eba129d-4815-4976-8cdd-8efb607d02de" class="">올해는 시간이 금방 지나간거 같다 매년 하는 소리 같긴하지만 매년 이렇게 느껴져ㅋㅋ</p><p id="5b75f75c-356e-4d32-9874-6dd9bc847e2a" class="">대전에서 1월까지 근무를 하고 2월 중순부터 서울 일선이네에서 지내기 시작했다</p><p id="8994cfd6-517a-4677-81dc-55d1c2db1e08" class="">이걸 잘 한 선택이라고 해야할지 잘 못된 선택이라고 해야할지 모르겠으나 잘 한 선택이라고 생각하기로 했다</p><p id="db6a5553-d02c-4380-b338-f352d4f07ef6" class="">먼저, 힘들었던 일을 회상해보자면 일단 아무리 친한 친구여도 남의 집에 같이 산다는건 정말 못할 짓이라는</p><p id="80218f28-977f-4cd5-b7bb-05455709f7ff" class="">생각을 했다 생각해보면 나는 고생을 사서하는 스타일인데 이번에도 역시..</p><p id="d32ae7b9-0fd5-4734-a585-718db3963012" class="">내가 결정한거지만 후회도 많이했었다 사는 패턴과 방식이 맞지 않았고 그걸 따라가기엔 벅찼다</p><p id="d1434d0d-aa34-4c27-8ec9-e090d640020b" class="">눈치를 굉장히 많이 보며 살았던거 같다 7개월 이상을 같이 살았는데 몰래 울기도 했었다</p><p id="65fb5efd-496c-4be8-9c91-4aff84556b02" class="">내가 이건 비합리적이라고 느꼈던 부분도 얘기 못한채 그냥 그렇게 살았었다</p><p id="3d4007f0-458c-4c3a-8baa-4ca6c4ea5218" class="">교인 친구와 틀어지거나 감정이 상해버리면 아무것도 도움이 되는게 없으니까 나로 인해 더 교회가 멀어지면 </p><p id="646358e5-3843-4797-88a9-7b0e7144f1ff" class="">안되니까 그런 생각들로 그냥 입을 다물고 있었고 대전에 다시 내려가서 이사를 도운다는 핑계로 동거 생활을</p><p id="fcddae3e-2dbc-45b8-bbe5-286efcb343f1" class="">마무리 했다</p><p id="0ee9a24e-1c7f-48fb-a3b0-ccb4faefe083" class="">
+</p><p id="c58fb344-c4d4-4e59-9f76-ee299c69fd93" class="">동거를 하면서 좋았던 점을 꼽자면 자유로웠다</p><p id="06afdcde-b89f-4233-888c-9427f33d6098" class="">부모에게서 독립된 환경에서 어떤것도 구애받지 않고 내가 하고 싶은것들을 할 수 있다는건 생각보다 훨씬</p><p id="ac2d7bb3-69a7-4b13-a98a-e276b9e19add" class="">매력적이었다 대전에 있을때도 늦게 들어오거나 외박 하는거에 있어서 얘기만 잘 하면 크게 뭐라하는건 없었지만</p><p id="96d3bdaa-af77-45f8-bfd8-24fad0deb97b" class="">확실히 분리된 삶을 살때에는 그냥 아예 뭐라 할 사람이 없으니 편했다</p><p id="0cd1981c-ed78-4cdd-b431-1670f4d265bb" class="">그래서 혼자 사는거에 겁이 많던 나도 독립을 꿈꾸게 된 계기가 되었다</p><p id="f1fcc9b4-a67c-4941-b56a-e62b9d930f8d" class="">그리고 주홍이를 만난것. 내가 서울 상경을 하지 않았더라면 못 만날수도 있었다</p><p id="c7426b4a-233c-455f-959e-4c24ec26277e" class="">어쩌다 만났고 그게 계기가 되서 제주에 가고 또 이렇게 연인 사이로 발전하게 되었다</p><p id="1e20a9cb-459a-40b6-a9a9-6c4aa1671030" class="">
+</p><p id="a31bc61f-80e1-4bd7-9acd-2a3af7fde579" class="">엄마와의 관계</p><p id="05ffedc0-d640-4e63-836f-4639265fafec" class="">엄마는 내가 2월달에 서울로 간다고 했을때는 아쉬워했지만 어짜피 올해 서울로 갈 예정이었기 때문에</p><p id="494d8d28-059d-4a62-9a95-8b4e057e9e19" class="">잘 보내주었다</p><p id="fc2032f0-6313-4957-98aa-c49daf8d4200" class="">근데 오빠도 서울에 있고 나도 서울로 가니 엄마가 혼자 많이 외로웠던 모양이다</p><p id="b1db69e7-231f-4029-8119-0d516497bb1c" class="">보면 엄마도 아닌척 하지만 외로움을 잘 타는 성격인 거 같다 전화로 언제 올거냐고, 왜 연락은 없냐고</p><p id="57580ed3-7e50-4333-a63e-5bf5b31b2911" class="">이러는거에 대해서 나는 좀 지쳤었고 엄마는 서운했던거 같다</p><p id="3d7a68e9-b7ba-4e93-b29d-9384409f3053" class="">나는 점차 가족과 분리된 삶을 사는것이 좋아졌고 이사 하기 전에 독립 의사를 밝혔지만</p><p id="7b2d7926-a9ca-455c-87d1-b379dab48850" class="">엄마는 굉장히 서운해했고 내가 변했다고 주장했다</p><p id="2afa6388-82c2-41a7-b8d2-8bed6677c293" class="">결국 금전적인 문제도 있고 독립하지 못하고 가족과 살고 있지만 독립 의사는 여전하다</p><p id="9f0987ad-a5a2-4dfb-90d3-2084a53c8749" class="">내가 능력이 되면 꼭 독립을 해서 살고싶다 언제까지 가족과 함께 살 수는 없다</p><p id="63862d4d-ae7a-4c1d-bbd4-5c47c920817a" class="">엄마도 알겠다고는 했지만 그때가면 또 무슨 말을 할지 모르겠다 ㅎㅎ</p><p id="636d53b5-88ab-4180-bced-d3545a06ae7c" class="">이사 후에도 엄마는 나에게 차가웠다 내가 남자친구를 만나고 변했고 말하는것도 옛날엔 안그랬는데</p><p id="eda8bb2d-beb9-4dfb-90e8-3c29590581bd" class="">지금은 변했다고 한다 자꾸 내가 변했다고 한다</p><p id="620422d3-8da5-4e93-9fdb-6a100446c92e" class="">내 입장에서는 내가 변했다고만 하고 엄마의 말투나 행동에 대해선 생각을 안 하는거처럼 보였다</p><p id="077f5b52-2bd9-4040-bbd6-7c343599dfbe" class="">그래 엄마 입장에서는 변했다고 느꼈을 수는 있으나 나는 차차 이렇게 바뀌어온것이다</p><p id="ce49f1f2-e94a-4084-916e-05b16b5e2b0e" class="">평생 내가 하고픈 말을 안하면서 살 수는 없으니 엄마에게 하고싶은 말은 하며</p><p id="67b52eb3-016f-46e7-8b6a-7b38bb90c020" class="">나를 끼고있으려고 집착하는것도 이젠 지쳐서 나를 놓아주길 바랬다 내가 자꾸 변했다고 말하는것도</p><p id="2480b74c-5c03-49b2-b22f-ce9fd5f94554" class="">듣기 싫었고 나의 얘기를 다른사람한테 전하는 등 내가 싫어하는 행동을 하는것도 실망스러웠다</p><p id="a210f1c1-beee-4f6a-a07f-971c123361fb" class="">그래도 잘 얘기하고 요즘엔 자연스러운거기 때문에 이해는 하지만 적응하는데 시간이 필요하다고 한다</p><p id="da696a35-3ac5-456e-8008-929051ef9443" class="">엄마 입장도 이해간다 서로 이해하고 잘 챙겨줄 수 있도록 노력해야겠다</p><p id="7cf0bb00-d79e-45bc-b201-4807bf7d4d39" class="">
+</p><p id="0fcd4df6-2bcc-402d-9e38-3e23c5d608ba" class="">올해 가을 주홍이를 따라 정신과를 갔다</p><p id="4312608e-56f5-4419-af25-c7cc34e3edf6" class="">그 전부터 공황 불안 등으로 가봐야겠다 생각만 했는데 뭔가 꺼림칙한건 어쩔수 없었던거 같다</p><p id="5a58322e-a9b6-466a-9761-58d155dca3a2" class="">일반 병원처럼 거기도 그냥 병원일 뿐인데 처음엔 가야할지 말지 고민이 많이 되었는데</p><p id="dbba563e-de78-442c-90b1-760ae540406d" class="">그런 나를 주홍이가 이끌어 같이 가주었다 고맙게 생각한다</p><p id="8929dffd-22bd-4732-886f-c42d752e25bd" class="">취직하고 정밀검사를 해야만 근본적인 원인을 알 수 있겠지만 우선 누르고 약으로 버티는중이다</p><p id="10a4c0fa-9ca1-4aeb-a49a-1b2abf9e5fb0" class="">약을 먹으니 좀 낫다</p><p id="1e96697e-779b-4e54-be2d-54643612432d" class="">
+</p><p id="df646fbf-81fa-4304-8e6e-0fd135a527b9" class="">
+</p><p id="b16df611-9bef-47a7-b810-43b6325d4fb6" class="">올해는 생산적으로 크게 한것도 없고 좀 쉬어야지 한게 벌써 일년이나 되었다</p><p id="d32ac6b2-8a1d-47bf-bea8-4cbe8c189a03" class="">다시 취직을 하려니 쉽지는 않은 상황이지만 꼭 취직해서 내년부터는 생산적인 일도 좀 하고</p><p id="4181856a-fa44-4d0d-944b-f6a69825f5c4" class="">신앙적으로도 더 성숙한 사람이 되고싶고 가족에게도 잘 하고싶고 주홍이에게도 잘 하고싶다</p><p id="5e155537-ea2c-4cfc-a54e-97c4e7e93966" class="">욕심내서 살되 대충 살아야겠다 (무슨 말이니)</p><p id="254b5a25-8ecc-459f-8b6b-0b8161720de1" class="">그리고 내가 하는 행동이 남에게 피해가 가지 않는선에서는 눈치좀 그만 보고 살자 내 할 얘기도 좀 하고 말이다</p><p id="fac42be2-cce7-4152-950f-8743680f1802" class="">깊게 생각할 필요도 없고 남이 날 어떻게 생각할까 하는건 더더욱 생각할 필요없다</p><p id="d7264a5a-2254-4c87-96a7-410a65e47d0a" class="">또, 지혜로운 사람이 되도록 노력해야겠다.</p><p id="95efc63c-98e0-494f-a2fa-80a20d17c556" class="">
+</p><p id="1b14c31a-71e8-4139-aef2-5db77de21718" class="">
+</p><h3 id="7cde5729-e1de-4d64-89b8-1caee683cedf" class="">2022 목표</h3><ol type="1" id="cce2a7d2-5ceb-4a62-a727-c5b51cee5dc9" class="numbered-list" start="1"><li>슬기로운 직장생활(취직)</li></ol><ol type="1" id="3903396f-9e45-45b7-94ae-e0f609c4c8f1" class="numbered-list" start="2"><li>기도 열심히 하기</li></ol><ol type="1" id="7b538e79-84a3-46ff-a3fd-56b4dd3232fb" class="numbered-list" start="3"><li>미안한 일보다 고마운 일을 더 만들기</li></ol><ol type="1" id="c593cedb-1e1c-43f9-9e04-f23dd8dd4153" class="numbered-list" start="4"><li>눈치보며 살지않기</li></ol><ol type="1" id="03c03a54-ebf3-47ad-bf0e-539dcbc28e98" class="numbered-list" start="5"><li>프로그래밍 공부하기</li></ol><ol type="1" id="778fc2dc-29f3-48f6-ac45-69569925d314" class="numbered-list" start="6"><li>교정 시작하기</li></ol><ol type="1" id="c3be6b73-a24b-4d62-b269-b7a03e1a05d8" class="numbered-list" start="7"><li></li></ol><p id="a89896a8-726d-42b3-bb82-1452503b3896" class="">
+</p><p id="2fea1ed5-1041-4a3a-97d9-87c6eb5452df" class="">
+</p><p id="83f73f8a-dfd3-45ce-a872-29416d3ce8bd" class="">
+</p></div></article></body></html>
