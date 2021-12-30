@@ -1,4 +1,6 @@
 // import { dotenv } from 'dotenv';
+// addEventListener로도 함수를 태그의 속성에 넣을 수 있나보다 나중에 알아보자
+
 let chaerin_secret = document.querySelector('.chaerin_secret');
 
 let chaerin_password = '1234'
